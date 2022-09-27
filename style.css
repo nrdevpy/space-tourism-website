@@ -1,0 +1,57 @@
+/* Custom properties & reset website*/
+:root {
+    --white: #FFFFFF;
+    --darkblue: #0B0D17;
+    --primaryColor: #D0D6F9;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Headings */
+h1 {font-size: 9.375rem;}
+h2 {font-size: 6.25rem;}
+h3 {font-size: 3.5rem;}
+h4 {font-size: 2rem;}
+h5 {
+    font-size: 1.75rem;
+    letter-spacing: 4.75px;
+    color: var(--primaryColor);
+}
+
+/* Globals */
+html {
+    font-family: 'Bellefair', serif;
+    background-image: url(assets/home/background-home-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    color: var(--white);
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+/* Utilities */
+.container {
+    margin-block: auto;
+    width: 95%;
+}
+/* BEM */
+/* Nav */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.navbar {display: none;}
+.burger {}
+
+/* Main */
+.main {}
+.main__header {}
