@@ -72,12 +72,41 @@ p {
 /* Nav */
 .nav {
     display: flex;
-    position: absolute;
+    align-items: center;
     justify-content: space-between;
+    width: 100%;
+    position: absolute;
     padding: 1.8rem;
 }
 .navbar {display: none;}
-.burger {}
+
+/* Hamburguer */
+.hamburguer {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+}
+.line {
+    display: block;
+    width: 30px;
+    height: 4px;
+    border-radius: 10px;
+    background-color: var(--white);
+}
+/* TODO: Hamburguer animation with Javascript */
+/* .line1 {
+    transform: rotate(45deg) translateY(8px) translateX(8px);
+}
+.line2 {
+    transform: translateX(-20px);
+}
+.line3 {
+    transform: rotate(-45deg) translateY(-8px) translateX(8px);
+} */
 
 /* Main */
 .main {
