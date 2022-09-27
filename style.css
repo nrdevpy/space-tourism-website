@@ -1,30 +1,38 @@
 /* Custom properties & reset website*/
 :root {
-    --white: #FFFFFF;
-    --darkblue: #0B0D17;
-    --primaryColor: #D0D6F9;
+    --white: rgb(255, 255, 255);
+    --darkblue: rgb(12, 14, 24);
+    --primaryColor: rgb(210, 216, 249);
 }
 
 *, *::after, *::before {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Bellefair', serif;
 }
 
 /* Headings */
-h1 {font-size: 9.375rem;}
-h2 {font-size: 6.25rem;}
+h1 {
+    font-size: 9.375rem;
+}
+h2 {
+    font-size: 6.25rem;
+    margin-block: 2rem;
+    text-transform: uppercase;
+}
 h3 {font-size: 3.5rem;}
 h4 {font-size: 2rem;}
 h5 {
-    font-size: 1.75rem;
-    letter-spacing: 4.75px;
     color: var(--primaryColor);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    /* letter-spacing: 4.75px; */
 }
 
 /* Globals */
 html {
-    font-family: 'Bellefair', serif;
     background-image: url(assets/home/background-home-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -34,24 +42,52 @@ body {
     color: var(--white);
 }
 html, body {
-    width: 100%;
-    height: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+p {
+    font-size: 1.56rem;
+    line-height: 1.4;
 }
 /* Utilities */
 .container {
-    margin-block: auto;
+    margin-inline: auto;
     width: 95%;
+}
+.primaryBtn {
+    width: 10rem;
+    height: 10rem;
+    border: none;
+    border-radius: 50%;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background-color: var(--white);
+    transition: all .2s ease-in-out;
+}
+.primaryBtn:hover {
+    outline: rgba(255, 255, 255, .2) solid 2rem;
 }
 /* BEM */
 /* Nav */
 .nav {
     display: flex;
+    position: absolute;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1.8rem;
 }
 .navbar {display: none;}
 .burger {}
 
 /* Main */
-.main {}
-.main__header {}
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding-top: 4rem;
+}
+.main__header p{
+    color: var(--primaryColor)
+}
