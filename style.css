@@ -28,7 +28,6 @@ h5 {
     font-size: 1.3rem;
     text-transform: uppercase;
     font-weight: normal;
-    /* letter-spacing: 4.75px; */
 }
 
 /* Globals */
@@ -79,7 +78,22 @@ p {
     position: absolute;
     padding: 1.8rem;
 }
-.navbar {display: none;}
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 4rem;
+    width: 75vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(20px);
+    list-style: none;
+}
 
 /* Hamburger */
 .hamburger {
