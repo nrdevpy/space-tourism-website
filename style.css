@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Bellefair', serif;
+    font-weight: 400;
 }
 
 /* Headings */
@@ -27,7 +28,6 @@ h5 {
     color: var(--primaryColor);
     font-size: 1.3rem;
     text-transform: uppercase;
-    font-weight: normal;
 }
 
 /* Globals */
