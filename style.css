@@ -81,8 +81,9 @@ p {
 .navbar {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
+    padding: 8rem 0 0 2rem;
     row-gap: 4rem;
     width: 75vw;
     height: 100vh;
@@ -94,8 +95,18 @@ p {
     backdrop-filter: blur(20px);
     list-style: none;
     transition: all ease-in-out .3s;
+    counter-reset: li;
 }
-
+.navbar > li {
+    text-transform: uppercase;
+}
+.navbar > li:before {
+    counter-increment: li decimal 0;
+    content: counter(decimal) '' counter(li) '';
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding-right: 1rem;
+}
 /* Hamburger */
 .hamburger {
     width: 40px;
