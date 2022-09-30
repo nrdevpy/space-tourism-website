@@ -3,7 +3,17 @@
     color: rgba(255, 255, 255, 25%);
     font-weight: bold;
 }
-
+li[class="planet--active"] > a {
+    color: white;
+}
+li[class="planet--active"] > a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    border-bottom: 2px solid white;
+}
 /* == BEM === */
 /* Main */
 .main {
@@ -23,5 +33,13 @@
 
 /* Planet list */
 .planets {
+    display: flex;
     list-style: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.planets a {
+    color: rgba(255, 255, 255, 50%);
+    position: relative;
 }
