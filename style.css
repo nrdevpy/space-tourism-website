@@ -1,8 +1,9 @@
-/* Custom properties & reset website*/
+/* === Custom properties & reset website ===*/
 :root {
     --white: rgb(255, 255, 255);
     --darkblue: rgb(12, 14, 24);
     --primaryColor: rgb(210, 216, 249);
+    --subHeading: 1.75rem;
 }
 
 *, *::after, *::before {
@@ -13,7 +14,7 @@
     font-weight: 400;
 }
 
-/* Headings */
+/* === Headings === */
 h1 {
     font-size: 9.375rem;
 }
@@ -30,13 +31,7 @@ h5 {
     text-transform: uppercase;
 }
 
-/* Globals */
-html {
-    background-image: url(assets/home/background-home-tablet.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-
+/* === Globals === */
 body {
     color: var(--white);
 }
@@ -48,7 +43,7 @@ p {
     font-size: 1.56rem;
     line-height: 1.4;
 }
-/* Utilities */
+/* === Utilities === */
 .container {
     margin-inline: auto;
     width: 95%;
@@ -68,7 +63,42 @@ p {
 .primaryBtn:hover {
     outline: rgba(255, 255, 255, .2) solid 2rem;
 }
-/* BEM */
+.subHeading {
+    font-size: 1;
+}
+/* Hamburger */
+.hamburger {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    z-index: 110;
+}
+input[id="hamburger"] {
+    display: none;
+}
+input[id="hamburger"]:checked ~ .hamburger .line1{
+    transform: rotate(135deg) translateY(-8px) translateX(8px);
+}
+input[id="hamburger"]:checked ~ .hamburger .line2{
+    opacity: 0;
+}
+input[id="hamburger"]:checked ~ .hamburger .line3{
+    transform: rotate(-135deg) translateY(8px) translateX(7px);
+}
+.line {
+    display: block;
+    width: 30px;
+    height: 4px;
+    border-radius: 10px;
+    background-color: var(--white);
+    transition: .2s ease-in-out;
+}
+/* === BEM === */
 /* Nav */
 .nav {
     display: flex;
@@ -113,38 +143,7 @@ p {
     font-size: 1.6rem;
     padding-right: 1rem;
 }
-/* Hamburger */
-.hamburger {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    cursor: pointer;
-    z-index: 110;
-}
-input[id="hamburger"] {
-    display: none;
-}
-input[id="hamburger"]:checked ~ .hamburger .line1{
-    transform: rotate(135deg) translateY(-8px) translateX(8px);
-}
-input[id="hamburger"]:checked ~ .hamburger .line2{
-    opacity: 0;
-}
-input[id="hamburger"]:checked ~ .hamburger .line3{
-    transform: rotate(-135deg) translateY(8px) translateX(7px);
-}
-.line {
-    display: block;
-    width: 30px;
-    height: 4px;
-    border-radius: 10px;
-    background-color: var(--white);
-    transition: .2s ease-in-out;
-}
+/* Main */
 .main {
     display: flex;
     flex-direction: column;
@@ -153,6 +152,8 @@ input[id="hamburger"]:checked ~ .hamburger .line3{
     min-height: 100vh;
     text-align: center;
     padding-top: 4rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 .main__header p{
     color: var(--primaryColor)
