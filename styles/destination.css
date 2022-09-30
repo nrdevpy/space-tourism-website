@@ -43,3 +43,7 @@ li[class="planet--active"] > a::before{
     color: rgba(255, 255, 255, 50%);
     position: relative;
 }
+
+.planets button {
+    /* background: unset; */
+}
