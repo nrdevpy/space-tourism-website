@@ -14,16 +14,25 @@
     <title>Frontend Mentor | Space tourism website</title>
     <!-- Scripts -->
     <script src="../app.js" defer></script>
-    <script src="../js/fetch.js"></script>
+    <script src="../js/fetch.js" type="module" defer></script>
+    <script src="../js/planets.js" type="module" defer></script>
   </head>
 <body>
   <nav class="nav">
     <img src="../assets/shared/logo.svg" alt="logo">
     <ul class="navbar" id="navbar">
-      <li>Home</li>
-      <li>Destination</li>
-      <li>Crew</li>
-      <li>Technology</li>
+      <li>
+        <a href="../index.html">Home</a>
+      </li>
+      <li>
+        <a href="../pages/destination-moon.html">Destination</a>
+      </li>
+      <li>
+        <a href="#">Crew</a>
+      </li>
+      <li>
+        <a href="#">Technology</a>
+      </li>
     </ul>
     <div class="nav__hamburger">
       <input type="checkbox" name="hamburger" id="hamburger">
@@ -35,11 +44,26 @@
     </div>
   </nav>
   <main class="main">
-<!--     01 Pick your destination
-    Moon
-    Mars
-    Europa
-    Titan
+    <h4><span class="lightGray">01</span> Pick your destination</h4>
+    <img class="planetImg" src="../assets/destination/image-moon.png" alt="moon" id="planet">
+    <ul class="planets" id="planets">
+      <li>
+        <a href="#">Moon</a>
+      </li>
+      <li>
+        <a href="#">Mars</a>
+      </li>
+      <li>
+        <a href="#">Europa</a>
+      </li>
+      <li>
+        <a href="#">Titan</a>
+    </ul>
+<!--     
+    
+    
+    
+    
     Moon
     See our planet as you’ve never seen it before. A perfect relaxing trip away to help
     regain perspective and come back refreshed. While you’re there, take in some history
