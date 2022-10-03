@@ -69,8 +69,17 @@ li[class="planet--active"]>a::before {
     position: relative;
     font-size: 1.2rem;
     transition: all ease-in-out .2s;
+    cursor: pointer;
 }
-
+.planets li:hover button::before{
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 25%;
+    width: 50%;
+    animation: planet-hover ease-in-out .2s;
+    border-bottom: 2px solid rgba(255, 255, 255, 50%);
+}
 .planets button.planet--active {
     color: var(--white);
 }
@@ -79,7 +88,18 @@ li[class="planet--active"]>a::before {
     content: '';
     position: absolute;
     bottom: -8px;
-    left: 0;
-    width: 100%;
+    left: 25%;
+    width: 50%;
     border-bottom: 2px solid white;
+}
+
+@keyframes planet-hover {
+    0% {
+        width: 0%;
+        left: 50%;
+    }
+    100% {
+        width: 50%;
+        left: 25%;
+    }
 }
