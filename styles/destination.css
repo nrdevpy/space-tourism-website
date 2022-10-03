@@ -71,7 +71,7 @@ li[class="planet--active"]>a::before {
     transition: all ease-in-out .2s;
     cursor: pointer;
 }
-.planets li:hover button::before{
+.planets li:hover button:not(.planet--active)::before{
     content: '';
     position: absolute;
     bottom: -8px;

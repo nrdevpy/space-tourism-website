@@ -21,20 +21,26 @@ await data().then(data => {
     // Planet image.
     planet.setAttribute('src', `.${webp}`)
     planet.setAttribute('alt', name)
-    
     // Planets list.
     let list = '';
     for (let planet of destinations) {
         let {name} = planet;
         name = name.toLowerCase();
-
-        list += `
+        if (list === '') {
+            list += `
             <li>
-                <button id="${name}" type="button">${name}</button>
+                <button class="planet--active" id="${name}" type="button">${name}</button>
             </li>
-        `
+        `    
+        } else {
+            list += `
+                <li>
+                    <button id="${name}" type="button">${name}</button>
+                </li>
+            `
+        }
     }
     planetsList.innerHTML = list;
-
+    
     // 
 })
