@@ -9,14 +9,9 @@ const planetDescription = document.getElementById('planet_description');
 
 await data().then(data => {
     const destinations = data.destinations
-    console.log(destinations)
-    // Destructuring
-    const {
-        name,
-        description,
-        distance,
-        travel
-    } = destinations[0];
+    // console.log(destinations)
+    // Destination
+    const {name} = destinations[0];
     const {webp} = destinations[0].images;
     
     // Planet image.
@@ -45,16 +40,17 @@ await data().then(data => {
     planetsList.innerHTML = list;
 
     // Change planet
-    const planets = document.querySelectorAll(".planet--inactive");
+    const planets = document.querySelectorAll(".planets button");
     planets.forEach(planetNav => {
         planetNav.addEventListener('click', () => {
             let id = planetNav.id;
-            
-            destinations.forEach(destination => {
+            planets.forEach(planetList => {
+                planetList.setAttribute('class', 'planet-inactive');
+            })
+            destinations.forEach(destination => {  
                 if (destination.name === id) {
                     const {
                         name,
-                        image,
                         description,
                         distance,
                         travel
@@ -64,6 +60,7 @@ await data().then(data => {
                     // Set planet image.
                     planet.setAttribute('src', `.${webp}`);
                     planet.setAttribute('alt', name);
+                    planetNav.setAttribute('class', 'planet--active');
                     planetName.innerText = name;
                     planetDescription.innerText = description;
                 }
