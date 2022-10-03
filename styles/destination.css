@@ -55,19 +55,13 @@ li[class="planet--active"]>a::before {
     font-size: 1.2rem;
     text-transform: uppercase;
 }
-
-/* 
-.planets a {
-    color: rgba(255, 255, 255, 50%);
-    position: relative;
-} */
 .planets button {
     color: rgba(255, 255, 255, 50%);
     background-color: inherit;
     border: none;
     text-transform: uppercase;
     position: relative;
-    font-size: 1.2rem;
+    font-size: 1rem;
     transition: all ease-in-out .2s;
     cursor: pointer;
 }
@@ -91,6 +85,7 @@ li[class="planet--active"]>a::before {
     left: 25%;
     width: 50%;
     border-bottom: 2px solid white;
+    animation: ease-in-out planet-hover .4s;
 }
 
 @keyframes planet-hover {

@@ -23,14 +23,16 @@ h2 {
     margin-block: 2rem;
     text-transform: uppercase;
 }
-h3 {font-size: 3.5rem;}
+h3 {font-size: 2.8rem;}
 h4 {font-size: 2rem;}
 h5 {
     color: var(--primaryColor);
     font-size: 1.3rem;
     text-transform: uppercase;
 }
-
+h1, h2, h3, h4 {
+    color: var(--white);
+}
 /* === Globals === */
 body {
     color: var(--white);
@@ -47,7 +49,7 @@ a {
     text-decoration: none;
 }
 p {
-    font-size: 1.56rem;
+    font-size: 1rem;
     line-height: 1.4;
 }
 /* === Utilities === */
@@ -72,6 +74,9 @@ p {
 }
 .subHeading {
     font-size: 1;
+}
+.uppercase {
+    text-transform: uppercase;
 }
 /* Hamburger */
 .hamburger {
@@ -160,7 +165,5 @@ input[id="hamburger"]:checked ~ .hamburger .line3{
     padding-top: 4rem;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-}
-.main__header p{
     color: var(--primaryColor)
 }

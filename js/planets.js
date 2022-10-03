@@ -6,17 +6,32 @@ const planetsList = document.getElementById('planets');
 const planet = document.getElementById('planet');
 const planetName = document.getElementById('planet_name');
 const planetDescription = document.getElementById('planet_description');
+const planetDistance = document.getElementById('distance');
+const planetTravel = document.getElementById('travel');
 
 await data().then(data => {
     const destinations = data.destinations
-    // console.log(destinations)
-    // Destination
-    const {name} = destinations[0];
+    // Default destination
+    console.log(destinations)
+    const {
+        name,
+        description,
+        distance,
+        travel
+    } = destinations[0];
     const {webp} = destinations[0].images;
     
     // Planet image.
     planet.setAttribute('src', `.${webp}`)
     planet.setAttribute('alt', name)
+    // Planet Title.
+    planetName.innerText = name;
+    // Planet Description.
+    planetDescription.innerText = description;
+    // Planet Distance.
+    planetDistance.innerText = distance;
+    // Planet Travel.
+    planetTravel.innerText = travel;
 
     // Planets list.
     let list = '';
@@ -63,6 +78,8 @@ await data().then(data => {
                     planetNav.setAttribute('class', 'planet--active');
                     planetName.innerText = name;
                     planetDescription.innerText = description;
+                    planetDistance.innerText = distance;
+                    planetTravel.innerText = travel;
                 }
             })
         })
