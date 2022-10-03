@@ -18,34 +18,6 @@ li[class="planet--active"]>a::before {
 }
 
 /* == BEM === */
-/* Main */
-.main {
-    justify-content: start;
-    padding-top: 8rem;
-    background-image: url('../assets/destination/background-destination-mobile.jpg');
-    row-gap: 2rem;
-}
-
-.main h3 {
-    text-transform: uppercase;
-}
-
-.main h4 {
-    text-transform: uppercase;
-}
-
-.main__header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 2rem;
-}
-
-/* Planet */
-.planetImg {
-    max-width: 50vw;
-}
-
 /* Planet list */
 .planets {
     display: flex;
@@ -97,4 +69,46 @@ li[class="planet--active"]>a::before {
         width: 50%;
         left: 25%;
     }
+}
+/* Main */
+.main {
+    justify-content: start;
+    padding-top: 8rem;
+    background-image: url('../assets/destination/background-destination-mobile.jpg');
+    row-gap: 2rem;
+}
+
+.main h3 {
+    text-transform: uppercase;
+}
+
+.main h4 {
+    text-transform: uppercase;
+}
+
+.main__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+}
+.main__header p:last-child {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgb(210, 216, 249, .2);
+}
+/* Planet */
+.planetImg {
+    max-width: 50vw;
+}
+/* Avg Distance */
+.avg, .travel {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+.avg p:first-child, .travel p:first-child{
+    margin-bottom: 1rem;
+}
+.avg p:last-child, .travel p:last-child{
+    color: var(--white);
+    font-size: 2rem;
 }

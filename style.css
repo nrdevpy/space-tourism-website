@@ -75,9 +75,6 @@ p {
 .subHeading {
     font-size: 1;
 }
-.uppercase {
-    text-transform: uppercase;
-}
 /* Hamburger */
 .hamburger {
     width: 40px;

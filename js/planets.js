@@ -12,7 +12,7 @@ const planetTravel = document.getElementById('travel');
 await data().then(data => {
     const destinations = data.destinations
     // Default destination
-    console.log(destinations)
+    // console.log(destinations)
     const {
         name,
         description,
