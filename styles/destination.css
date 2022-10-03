@@ -22,10 +22,19 @@ li[class="planet--active"] > a::before{
     background-image: url('../assets/destination/background-destination-mobile.jpg');
     row-gap: 2rem;
 }
+.main h3 {
+    text-transform: uppercase;
+}
 .main h4 {
     text-transform: uppercase;
 }
 
+.main__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+}
 /* Planet */
 .planetImg {
     max-width: 50vw;
@@ -34,6 +43,7 @@ li[class="planet--active"] > a::before{
 /* Planet list */
 .planets {
     display: flex;
+    justify-content: center;
     list-style: none;
     font-size: 1.2rem;
     text-transform: uppercase;

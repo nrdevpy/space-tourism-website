@@ -23,16 +23,18 @@ await data().then(data => {
     planet.setAttribute('alt', name)
     
     // Planets list.
-    let result = '';
+    let list = '';
     for (let planet of destinations) {
         let {name} = planet;
         name = name.toLowerCase();
 
-        result += `
+        list += `
             <li>
                 <button id="${name}" type="button">${name}</button>
             </li>
         `
     }
-    planetsList.innerHTML = result;
+    planetsList.innerHTML = list;
+
+    // 
 })
