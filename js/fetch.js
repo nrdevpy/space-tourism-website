@@ -4,8 +4,8 @@ async function data () {
     const data = response.json();
     return data;
 }
-data().then(datas => {
+/* data().then(datas => {
     // console.log (datas)
-})
+}) */
 
 export default data;

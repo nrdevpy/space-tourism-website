@@ -1,9 +1,4 @@
 /* === Utilities === */
-.lightGray {
-    color: rgba(255, 255, 255, 25%);
-    font-weight: bold;
-}
-
 li[class="planet--active"]>a {
     color: white;
 }
