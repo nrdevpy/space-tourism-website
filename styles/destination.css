@@ -67,28 +67,18 @@ li[class="planet--active"]>a::before {
 }
 /* Main */
 .main {
-    justify-content: start;
-    padding-top: 8rem;
     background-image: url('../assets/destination/background-destination-mobile.jpg');
-    row-gap: 2rem;
 }
 
-.main h3 {
-    text-transform: uppercase;
-}
-
-.main h4 {
-    text-transform: uppercase;
-}
-
-.main__header {
+.destination__header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 2rem;
+    row-gap: 1rem;
+    margin-bottom: 2rem;
 }
-.main__header p:last-child {
-    padding-bottom: 2rem;
+.destination__header p:last-child {
+    padding-bottom: 1rem;
     border-bottom: 1px solid rgb(210, 216, 249, .2);
 }
 /* Planet */
@@ -97,10 +87,10 @@ li[class="planet--active"]>a::before {
 }
 /* Avg Distance */
 .avg, .travel {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-transform: uppercase;
 }
-.avg p:first-child, .travel p:first-child{
+.avg p:first-child {
     margin-bottom: 1rem;
 }
 .avg p:last-child, .travel p:last-child{
