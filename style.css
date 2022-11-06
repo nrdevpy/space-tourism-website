@@ -6,7 +6,9 @@
     --subHeading: 1.75rem;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -15,14 +17,31 @@
 }
 
 /* === Headings === */
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     color: var(--white);
     text-transform: uppercase;
 }
-h1 {font-size: 2rem;}
-h2 {font-size: 1.8rem;}
-h3 {font-size: 1.4rem;}
-h4 {font-size: 1.4rem;}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
 h5 {
     color: var(--primaryColor);
     font-size: 1.2rem;
@@ -40,18 +59,25 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
 p {
     font-size: 1.2rem;
     line-height: 1.4;
+}
+
+.main img {
+    max-width: 50vw;
 }
 /* === Utilities === */
 .container {
     margin-inline: auto;
     width: 95%;
 }
+
 .lightGray {
     color: rgba(255, 255, 255, 25%);
 }
+
 .primaryBtn {
     width: 10rem;
     height: 10rem;
@@ -64,12 +90,15 @@ p {
     outline: rgba(255, 255, 255, 0) solid 1rem;
     transition: all .2s ease-in-out;
 }
+
 .primaryBtn:hover {
     outline: rgba(255, 255, 255, .2) solid 2rem;
 }
+
 .subHeading {
     font-size: 1;
 }
+
 /* Hamburger */
 .hamburger {
     width: 40px;
@@ -82,18 +111,23 @@ p {
     cursor: pointer;
     z-index: 110;
 }
+
 input[id="hamburger"] {
     display: none;
 }
-input[id="hamburger"]:checked ~ .hamburger .line1{
+
+input[id="hamburger"]:checked~.hamburger .line1 {
     transform: rotate(135deg) translateY(-8px) translateX(8px);
 }
-input[id="hamburger"]:checked ~ .hamburger .line2{
+
+input[id="hamburger"]:checked~.hamburger .line2 {
     opacity: 0;
 }
-input[id="hamburger"]:checked ~ .hamburger .line3{
+
+input[id="hamburger"]:checked~.hamburger .line3 {
     transform: rotate(-135deg) translateY(8px) translateX(7px);
 }
+
 .line {
     display: block;
     width: 30px;
@@ -102,6 +136,7 @@ input[id="hamburger"]:checked ~ .hamburger .line3{
     background-color: var(--white);
     transition: .2s ease-in-out;
 }
+
 /* === BEM === */
 /* Nav */
 .nav {
@@ -112,6 +147,7 @@ input[id="hamburger"]:checked ~ .hamburger .line3{
     position: absolute;
     padding: 1.8rem;
 }
+
 .navbar {
     display: flex;
     flex-direction: column;
@@ -131,14 +167,17 @@ input[id="hamburger"]:checked ~ .hamburger .line3{
     transition: all ease-in-out .3s;
     counter-reset: li;
 }
+
 .navbar li {
     width: 100%;
     border-radius: 6px;
     text-transform: uppercase;
 }
+
 .navbar li:hover {
     background-color: rgba(255, 255, 255, .1);
 }
+
 .navbar a:before {
     counter-increment: li decimal 0;
     content: counter(decimal) '' counter(li) '';
@@ -146,6 +185,7 @@ input[id="hamburger"]:checked ~ .hamburger .line3{
     font-size: 1.6rem;
     padding-right: 1rem;
 }
+
 /* Main */
 .main {
     padding-top: 8rem;
