@@ -5,15 +5,25 @@
 .crewImg {
     width: 50vw;
 }
-.crews {
-    margin-block: 2rem;
+
+/* Crew header */
+.crew__header > p {
+    color: var(--primaryColor);
 }
+
+/* Crew image section */
 .crew__person {
     position: relative;
 }
+
 .crew__person ~ h3 {
-    margin-bottom: 1rem;
+    margin-bottom: .6rem;
 }
+.crew__person > h1,
+.crew__person ~ h2 {
+    margin-bottom: 2rem;
+}
+
 .crew__person::after {
     border-bottom: 1px solid gray;
     content: '';
@@ -23,11 +33,13 @@
     bottom: 0.2rem;
 }
 
+/* Crew list */
 .crews {
     display: flex;
     justify-content: center;
     column-gap: 1.4rem;
     list-style-type: none;
+    margin-block: 2rem;
 }
 
 .crew__bullet {
