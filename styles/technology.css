@@ -1,0 +1,40 @@
+.main {
+    background-image: url('../assets/technology/background-technology-mobile.jpg');
+}
+
+/* Crew header */
+.tech__header > p {
+    color: var(--primaryColor);
+}
+
+/* Crew image section */
+.tech__project {
+    position: relative;
+}
+
+.tech__project ~ h3 {
+    margin-bottom: .6rem;
+}
+.tech__project > h1,
+.tech__project ~ h2 {
+    margin-bottom: 2rem;
+}
+
+/* Crew list */
+.technologies {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.4rem;
+    list-style-type: none;
+    margin-block: 2rem;
+}
+
+.tech__bullet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    border: 1px solid white;
+}
