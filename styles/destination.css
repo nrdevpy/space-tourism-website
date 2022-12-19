@@ -22,6 +22,9 @@ li[class="planet--active"]>a::before {
     font-size: 1.2rem;
     text-transform: uppercase;
 }
+.planetImg {
+    margin-block: 1rem;
+}
 .planets button {
     color: rgba(255, 255, 255, 50%);
     background-color: inherit;
@@ -77,20 +80,25 @@ li[class="planet--active"]>a::before {
     row-gap: 1rem;
     margin-bottom: 2rem;
 }
+.destination__header > h2 {
+    margin-block: .5rem;
+}
 .destination__header p:last-child {
     padding-bottom: 1rem;
     border-bottom: 1px solid rgb(210, 216, 249, .2);
 }
 
-/* Avg Distance */
+/* Avg & Distance */
+section.info {
+    display: flex;
+    justify-content: space-around;
+}
+
 .avg, .travel {
-    margin-bottom: 1rem;
     text-transform: uppercase;
 }
-.avg p:first-child {
-    margin-bottom: 1rem;
-}
-.avg p:last-child, .travel p:last-child{
-    color: var(--white);
-    font-size: 2rem;
+
+.avg > p:first-child,
+.travel > p:first-child {
+    margin-bottom: .4rem;
 }
