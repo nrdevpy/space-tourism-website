@@ -13,6 +13,9 @@ li[class="planet--active"]>a::before {
 }
 
 /* == BEM === */
+.destination__header img {
+    max-width: 15rem;
+}
 /* Planet list */
 .planets {
     display: flex;

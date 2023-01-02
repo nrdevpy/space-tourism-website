@@ -61,9 +61,6 @@ p {
     line-height: 1.4;
 }
 
-.main img {
-    max-width: 50vw;
-}
 /* === Utilities === */
 .container {
     margin-inline: auto;

@@ -1,87 +1,55 @@
 // Data json.
 import data from './fetch.js'
 
-// Upload data to the page.
-const crewPerson = document.getElementById('crew_person');
-const crewList = document.getElementById('crews');
-const crewName = document.getElementById('crew_name');
-const crewDescription = document.getElementById('crew_description');
-const crewProfession = document.getElementById('crew_profession');
+const specialistsID = [];
+const crewImg = document.getElementById('crew_person')
+const crewProfession = document.getElementById('crew_profession')
+const crewName = document.getElementById('crew_name')
+const crewDescription = document.getElementById('crew_description')
 
-/* await data().then(data => {
-    const destinations = data.destinations
-    // Default destination
-    // console.log(destinations)
-    const {
-        name,
-        description,
-        distance,
-        travel
-    } = destinations[0];
-    const {webp} = destinations[0].images;
-    
-    // Planet image.
-    planet.setAttribute('src', `.${webp}`)
-    planet.setAttribute('alt', name)
-    // Planet Title.
-    planetName.innerText = name;
-    // Planet Description.
-    planetDescription.innerText = description;
-    // Planet Distance.
-    planetDistance.innerText = distance;
-    // Planet Travel.
-    planetTravel.innerText = travel;
+data().then(data => {
+    const {crew} = data;
+    const crewList = document.getElementById('crew');
+    let bullets;
 
-    // Planets list.
-    let list = '';
-    for (let planet of destinations) {
-        let {name} = planet;
+    crew.map (specialist => {
+        // ID
+        const {name} = specialist;
+        const id = name.replace(" ", "").toLocaleLowerCase();
+        specialistsID.push(id);
 
-        if (list === '') {
-            list += `
-            <li>
-                <button class="planet--active" id="${name}" type="button">${name}</button>
-            </li>
-        `    
+        // Bullets points - Fetching data
+        if (bullets === undefined){
+            bullets = `<li id="${id}" class="crew__bullet active"></li>`;
         } else {
-            list += `
-                <li>
-                    <button class="planet--inactive" id="${name}" type="button">${name}</button>
-                </li>
-            `
+            bullets += `<li id="${id}" class="crew__bullet"></li>`;
         }
-    }
-    planetsList.innerHTML = list;
+    })
 
-    // Change planet
-    const planets = document.querySelectorAll(".planets button");
-    planets.forEach(planetNav => {
-        planetNav.addEventListener('click', () => {
-            let id = planetNav.id;
-            planets.forEach(planetList => {
-                planetList.setAttribute('class', 'planet-inactive');
-            })
-            destinations.forEach(destination => {  
-                if (destination.name === id) {
-                    const {
-                        name,
-                        description,
-                        distance,
-                        travel
-                    } = destination;
-                    const {webp} = destination.images;
+    // Adding bullets points
+    crewList.innerHTML = bullets;
+
+    // Bullets event listener
+    crewList.childNodes.forEach(specialistLi => {
+        specialistLi.addEventListener('click', () => {
+            crew.map (specialist => {
+                const {name, bio, role} = specialist;
+                const {webp} = specialist.images;
+                const id = name.replace(" ", "").toLocaleLowerCase();
+                if (specialistLi.id === id) {
+                    // Toggle active bullet
+                    const activeBullet = document.querySelector('.crew__bullet.active');
+                    const inactiveBullet = document.getElementById(id)
+                    activeBullet.classList.toggle('active');
+                    inactiveBullet.classList.toggle('active');
                     
-                    // Set planet image.
-                    planet.setAttribute('src', `.${webp}`);
-                    planet.setAttribute('alt', name);
-                    planetNav.setAttribute('class', 'planet--active');
-                    planetName.innerText = name;
-                    planetDescription.innerText = description;
-                    planetDistance.innerText = distance;
-                    planetTravel.innerText = travel;
+                    // Change info
+                    crewImg.setAttribute('src', `.${webp}`)
+                    crewProfession.innerHTML = role;
+                    crewName.innerHTML = name;
+                    crewDescription.innerHTML = bio;
                 }
             })
         })
     })
-    // 
-}) */
+})

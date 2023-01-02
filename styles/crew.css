@@ -3,34 +3,30 @@
 }
 
 /* Crew header */
-.crew__header > p {
+.crew__header>p {
     color: var(--primaryColor);
 }
 
 /* Crew image section */
-.crew__person {
-    position: relative;
+.crewImg > img {
+    object-fit: contain;
+    width: 100%;
+    height: 40vh;
+    border-bottom: 2px solid gray;
 }
 
-.crew__person ~ h3 {
+.crew__person~h3 {
     margin-bottom: .6rem;
 }
-.crew__person > h1,
-.crew__person ~ h2 {
+
+.crew__person>h1,
+.crew__person~h2 {
     margin-bottom: 2rem;
 }
 
-.crew__person::after {
-    border-bottom: 1px solid gray;
-    content: '';
-    display: block;
-    width: 100%;
-    position: absolute;
-    bottom: 0.2rem;
-}
 
 /* Crew list */
-.crews {
+.crew {
     display: flex;
     justify-content: center;
     column-gap: 1.4rem;
@@ -39,8 +35,14 @@
 }
 
 .crew__bullet {
-    width: 0.8rem;
-    height: 0.8rem;
+    padding: .6rem;
+    margin-inline: .5rem;
+    border: 2rem;
     border-radius: 100%;
     background: gray;
+    cursor: pointer;
+}
+
+.crew__bullet.active {
+    background: #fff;
 }
