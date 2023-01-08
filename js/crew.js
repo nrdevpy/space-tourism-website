@@ -10,7 +10,7 @@ data().then(data => {
         let { webp } = specialist.images;
 
         result += `
-            <article>
+            <article class="crew__section__article">
                 <img class="crewImg" src=".${webp}">
                 <h3 class="lightGray">${role}</h3>
                 <h2>${name}</h2>

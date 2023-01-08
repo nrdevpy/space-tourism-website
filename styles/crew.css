@@ -7,16 +7,37 @@
     height: 30vh;
     object-fit: contain;
     margin-bottom: 2rem;
+    padding-bottom: .1rem;
     border-bottom: 1px solid gray;
 }
 
-/* Crew header */
-.crew__section > p {
+/* Crew section */
+.crew__section {
+    display: flex;
+    overflow-x: auto;
+    column-gap: 4rem;
+    scroll-snap-type: x mandatory;
+}
+
+.crew__section>p {
     color: var(--primaryColor);
 }
+
 .crew__section h2 {
     margin-bottom: 2rem;
 }
+.crew__section h3 {
+    margin-bottom: .5rem;
+}
+
+/* Crew article */
+.crew__section__article {
+    padding-inline: 2rem;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    min-width: 100vw;
+}
+
 /* Crew list */
 .crews {
     display: flex;
