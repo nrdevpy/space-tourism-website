@@ -27,7 +27,7 @@ h5 {
 }
 
 h1 {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
 }
 
 h5 {
@@ -172,7 +172,7 @@ input[id="hamburger"]:checked~.hamburger .line3 {
 
 /* Main */
 .main {
-    padding-top: 4rem;
+    padding-top: 6rem;
     min-height: 100vh;
     background-size: 100% 100%;
     background-attachment: fixed;
