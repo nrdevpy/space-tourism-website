@@ -1,8 +1,14 @@
 .main {
-    justify-content: space-evenly;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-image: url(../assets/home/background-home-mobile.jpg);
 }
 
+.home__header {
+    margin-bottom: 2rem;
+}
 .home__header > h1 {
     margin: 1rem 0 2rem 0;
 }
