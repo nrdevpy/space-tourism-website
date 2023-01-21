@@ -4,12 +4,18 @@
 }
 
 /* Crew list */
-.crews {
+.crew__section {
     display: flex;
-    justify-content: center;
-    column-gap: 1.4rem;
-    list-style-type: none;
-    margin-block: 2rem;
+    align-items: baseline;
+    max-width: 100%;
+    overflow-x: scroll;
+}
+.crew__section__article {
+    min-width: 100vw;
+}
+.crew__section img {
+    object-fit: contain;
+    max-height: 14rem;
 }
 
 .crew__bullet {
