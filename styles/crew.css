@@ -7,11 +7,16 @@
 .crew__section {
     display: flex;
     align-items: baseline;
+    column-gap: 50vw;
     max-width: 100%;
     overflow-x: scroll;
+    scroll-snap-type: x mandatory;
 }
 .crew__section__article {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
     min-width: 100vw;
+    padding: 1rem;
 }
 .crew__section img {
     object-fit: contain;
