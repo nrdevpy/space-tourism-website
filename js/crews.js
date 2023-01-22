@@ -2,11 +2,13 @@
 import data from './fetch.js'
 
 const crewSection = document.querySelector('.crew__section')
+const bulletPointsList = document.querySelector('.bulletsPoints')
 
 data().then(data => {
     const { crew } = data
     let innerSpecialist = ''
-
+    let bulletsPoints = ''
+        
     crew.forEach(specialist => {
         const { name, role, bio } = specialist
         const { webp } = specialist.images
@@ -18,6 +20,11 @@ data().then(data => {
                 <p>${bio}</p>
             </article>
        `
+       bulletsPoints += `
+            <li class="crew__bullet"></li>
+       `
     })
+    
     crewSection.innerHTML = innerSpecialist;
+    bulletPointsList.innerHTML = bulletsPoints;
 })
