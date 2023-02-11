@@ -95,6 +95,7 @@ li[class="planet--active"]>a::before {
 section.info {
     display: flex;
     justify-content: space-around;
+    padding-bottom: 2rem;
 }
 
 .avg, .travel {
