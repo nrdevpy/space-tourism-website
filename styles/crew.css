@@ -37,7 +37,7 @@
 /* Crew list */
 .crew__bullet {
     padding: .6rem;
-    margin-inline: .5rem;
+    margin-inline: .3rem;
     border: 2rem;
     border-radius: 100%;
     background: gray;
@@ -48,8 +48,8 @@
 }
 .bulletsPoints {
     display: flex;
-    position: fixed;
+    position: absolute;
     list-style: none;
-    column-gap: 1rem;
+    column-gap: .4rem;
     top: 30.5rem;
 }
