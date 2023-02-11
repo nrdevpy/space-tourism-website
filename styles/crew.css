@@ -42,6 +42,9 @@
     background: gray;
 }
 
+.crew__bullet.active {
+    background: white;
+}
 .bulletsPoints {
     display: flex;
     position: fixed;
