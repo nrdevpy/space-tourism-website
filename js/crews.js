@@ -1,55 +1,55 @@
 // Data json.
 import data from './fetch.js'
 
-const specialistsID = [];
-const crewImg = document.getElementById('crew_person')
-const crewProfession = document.getElementById('crew_profession')
-const crewName = document.getElementById('crew_name')
-const crewDescription = document.getElementById('crew_description')
+const crewSection = document.querySelector('.crew__section')
+const bulletPointsList = document.querySelector('.bulletsPoints')
+let specialistsNames = [];
 
+
+
+
+// App
 data().then(data => {
-    const {crew} = data;
-    const crewList = document.getElementById('crew');
-    let bullets;
+    const { crew } = data
+    let innerSpecialist = ''
+    let bulletsPoints = ''
 
-    crew.map (specialist => {
-        // ID
-        const {name} = specialist;
-        const id = name.replace(" ", "").toLocaleLowerCase();
-        specialistsID.push(id);
-
-        // Bullets points - Fetching data
-        if (bullets === undefined){
-            bullets = `<li id="${id}" class="crew__bullet active"></li>`;
-        } else {
-            bullets += `<li id="${id}" class="crew__bullet"></li>`;
-        }
+    crew.forEach(specialist => {
+        const { name, role, bio } = specialist
+        const { webp } = specialist.images
+        specialistsNames.push(name)
+        innerSpecialist += `
+            <article data-name="${name}" class="crew__section__article">
+                <img class="crewImg" src=".${webp}"/>
+                <h3 class="lightGray">${role}</h3>
+                <h2>${name}</h2>
+                <p>${bio}</p>
+            </article>
+       `
+        bulletsPoints += `
+            <li class="crew__bullet"></li>
+       `
     })
+    crewSection.innerHTML = innerSpecialist;
+    bulletPointsList.innerHTML = bulletsPoints;
 
-    // Adding bullets points
-    crewList.innerHTML = bullets;
 
-    // Bullets event listener
-    crewList.childNodes.forEach(specialistLi => {
-        specialistLi.addEventListener('click', () => {
-            crew.map (specialist => {
-                const {name, bio, role} = specialist;
-                const {webp} = specialist.images;
-                const id = name.replace(" ", "").toLocaleLowerCase();
-                if (specialistLi.id === id) {
-                    // Toggle active bullet
-                    const activeBullet = document.querySelector('.crew__bullet.active');
-                    const inactiveBullet = document.getElementById(id)
-                    activeBullet.classList.toggle('active');
-                    inactiveBullet.classList.toggle('active');
-                    
-                    // Change info
-                    crewImg.setAttribute('src', `.${webp}`)
-                    crewProfession.innerHTML = role;
-                    crewName.innerHTML = name;
-                    crewDescription.innerHTML = bio;
-                }
-            })
+    // Observer
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const dataName = entry.target.getAttribute('data-name');
+            const specialistNumber = specialistsNames.findIndex(elem => elem === dataName)
+            const bullets = document.querySelectorAll('.crew__bullet')
+
+            bullets.forEach(bullet => bullet.classList.remove('active'))
+            bullets[specialistNumber].classList.add('active')
         })
     })
+    // Get all specialists
+    const specialists = document.querySelectorAll('.crew__section__article')
+    specialists.forEach(specialist => {
+        observer.observe(specialist)
+    })
 })
+
