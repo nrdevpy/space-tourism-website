@@ -3,7 +3,6 @@ import data from './fetch.js'
 
 const crewSection = document.querySelector('.crew__section')
 const bulletPointsList = document.querySelector('.bulletsPoints')
-let specialistsNames = [];
 
 
 
@@ -13,6 +12,7 @@ data().then(data => {
     const { crew } = data
     let innerSpecialist = ''
     let bulletsPoints = ''
+    let specialistsNames = [];
 
     crew.forEach(specialist => {
         const { name, role, bio } = specialist

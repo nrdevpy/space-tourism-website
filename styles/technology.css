@@ -8,6 +8,9 @@
 /* Crew header */
 .tech__header {
     display: flex;
+    align-items: baseline;
+    column-gap: 50vw;
+    max-width: 100%;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
 }
