@@ -14,7 +14,7 @@ li[class="planet--active"]>a::before {
 
 /* == BEM === */
 .destination__header img {
-    max-width: 15rem;
+    max-width: 10rem;
 }
 /* Planet list */
 .planets {
