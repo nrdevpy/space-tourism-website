@@ -2,26 +2,37 @@
     background-image: url('../assets/technology/background-technology-mobile.jpg');
 }
 
+.main h1 {
+    padding-block: 1rem;
+}
 /* Crew header */
-.tech__header > p {
+.tech__header {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.tech__header img {
+    margin-block: 2rem;
+}
+.tech__header article {
+    min-width: 100vw;
+    padding-inline: 2rem;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+.tech__header h3,
+.tech__header h2 {
+    padding-block: .4rem;
+}
+
+.tech__header p {
     color: var(--primaryColor);
 }
 
-/* Crew image section */
-.tech__project {
-    position: relative;
-}
-
-.tech__project ~ h3 {
-    margin-bottom: .6rem;
-}
-.tech__project > h1,
-.tech__project ~ h2 {
-    margin-bottom: 2rem;
-}
-
 /* Crew list */
-.technologies {
+.tech__bullets {
     display: flex;
     justify-content: center;
     column-gap: 1.4rem;
@@ -36,5 +47,11 @@
     width: 2rem;
     height: 2rem;
     border-radius: 100%;
-    border: 1px solid white;
+    color: gray;
+    border: 1px solid gray;
+}
+
+.tech__bullet.active {
+    color: var(--white);
+    border-color: var(--white);
 }
