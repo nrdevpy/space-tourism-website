@@ -44,7 +44,8 @@
 }
 
 .crew__bullet.active {
-    background: white;
+    background: var(--white);
+    transition: ease-in-out .4s all;
 }
 .bulletsPoints {
     display: flex;

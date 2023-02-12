@@ -57,4 +57,5 @@
 .tech__bullet.active {
     color: var(--white);
     border-color: var(--white);
+    transition: ease-in-out .4s all;
 }
