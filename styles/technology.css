@@ -30,10 +30,6 @@
     padding-block: .4rem;
 }
 
-.tech__header p {
-    color: var(--primaryColor);
-}
-
 /* Crew list */
 .tech__bullets {
     display: flex;

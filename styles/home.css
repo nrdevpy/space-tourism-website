@@ -3,6 +3,46 @@
     background-image: url(../assets/home/background-home-mobile.jpg);
 }
 
-.home__header > h1 {
+.main h1 {
+    font-size: 4rem;
+}
+
+.home__article {
+    margin-bottom: 2rem;
+}
+
+.home__article p {
+    max-width: 30rem;
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        background-image: url(../assets/home/background-home-tablet.jpg);
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .main {
+        background-image: url(../assets/home/background-home-desktop.jpg);
+        text-align: start;
+    }
+
+    .main h1 {
+        font-size: 8rem;
+    }
+
+    .home__header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .home__article {
+        max-width: 40rem;
+    }
+}
+
+.home__header h1 {
     margin: 1rem 0 2rem 0;
 }

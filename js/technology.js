@@ -16,7 +16,7 @@ data().then(data => {
             <img src=".${landscape}">
             <h3 class="lightGray">The terminology...</h3>
             <h2>${name}</h2>
-            <p>${description}</p>
+            <p class="primaryColor">${description}</p>
         </article>
         `;
 

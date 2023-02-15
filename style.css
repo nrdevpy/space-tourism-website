@@ -12,19 +12,35 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Bellefair', serif;
+    font-family: "Barlow", serif;
     font-weight: 400;
 }
 
 /* === Headings === */
-h1,h2,h3,h4,h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     color: var(--white);
     text-transform: uppercase;
+    font-family: "Bellefair", serif;
 }
-h1 {font-size: 2rem;}
-h2 {font-size: 1.8rem;}
-h3 {font-size: 1.4rem;}
-h4 {font-size: 1.4rem;}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3,
+h4 {
+    font-size: 1.4rem;
+}
+
 h5 {
     color: var(--primaryColor);
     font-size: 1.2rem;
@@ -41,7 +57,9 @@ a {
     color: inherit;
     text-decoration: none;
 }
-
+a, button {
+    font-family: "Bellefair", serif;
+}
 p {
     font-size: 1.2rem;
     line-height: 1.4;
@@ -50,19 +68,48 @@ p {
 img {
     max-width: 100%;
 }
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 2.6rem;
+    }
+
+    h3,
+    h4 {
+        font-size: 2rem;
+    }
+
+    h5 {
+        color: var(--primaryColor);
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+}
+
 /* === Utilities === */
 .container {
     margin-inline: auto;
-    width: 95%;
+    padding: 1rem;
 }
 
 .lightGray {
     color: rgba(255, 255, 255, 25%);
 }
 
+.primaryColor {
+    color: var(--primaryColor);
+}
+
 .primaryBtn {
-    width: 10rem;
-    height: 10rem;
+    min-width: 10rem;
+    min-height: 10rem;
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -70,11 +117,19 @@ img {
     text-transform: uppercase;
     background-color: var(--white);
     outline: rgba(255, 255, 255, 0) solid 1rem;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
-.primaryBtn:hover {
-    outline: rgba(255, 255, 255, .2) solid 2rem;
+@media screen and (min-width: 768px) {
+    .primaryBtn {
+        font-size: 1.6rem;
+        min-width: 16rem;
+        min-height: 16rem;
+    }
+
+    .primaryBtn:hover {
+        outline: rgba(255, 255, 255, 0.2) solid 2rem;
+    }
 }
 
 .subHeading {
@@ -116,7 +171,7 @@ input[id="hamburger"]:checked~.hamburger .line3 {
     height: 4px;
     border-radius: 10px;
     background-color: var(--white);
-    transition: .2s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
 /* === BEM === */
@@ -135,7 +190,7 @@ input[id="hamburger"]:checked~.hamburger .line3 {
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    padding: 6rem .5rem 0 .5rem;
+    padding: 6rem 0.5rem 0 0.5rem;
     row-gap: 2rem;
     width: 75vw;
     height: 100vh;
@@ -146,7 +201,7 @@ input[id="hamburger"]:checked~.hamburger .line3 {
     background-color: rgba(255, 255, 255, 0);
     backdrop-filter: blur(20px);
     list-style: none;
-    transition: all ease-in-out .3s;
+    transition: all ease-in-out 0.3s;
     counter-reset: li;
 }
 
@@ -157,12 +212,12 @@ input[id="hamburger"]:checked~.hamburger .line3 {
 }
 
 .navbar li:hover {
-    background-color: rgba(255, 255, 255, .1);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .navbar a:before {
     counter-increment: li decimal 0;
-    content: counter(decimal) '' counter(li) '';
+    content: counter(decimal) "" counter(li) "";
     font-weight: bold;
     font-size: 1.6rem;
     padding-right: 1rem;
@@ -175,6 +230,6 @@ input[id="hamburger"]:checked~.hamburger .line3 {
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
-    background-size: 100% 100%;
+    background: center/cover no-repeat;
     text-align: center;
 }

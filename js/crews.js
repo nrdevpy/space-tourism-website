@@ -23,7 +23,7 @@ data().then(data => {
                 <img class="crewImg" src=".${webp}"/>
                 <h3 class="lightGray">${role}</h3>
                 <h2>${name}</h2>
-                <p>${bio}</p>
+                <p class="primaryColor">${bio}</p>
             </article>
        `
         bulletsPoints += `
