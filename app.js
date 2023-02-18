@@ -12,8 +12,14 @@ burgerCheck.addEventListener('change', () => {
     }
 });
 
+console.log()
+
 navAnchorList.forEach(anchor => {
-    addEventListener('click', () => {
-        navStyle.right = '-100%';
+    const navDirection = getComputedStyle(document.getElementById('navbar')).flexDirection;
+    anchor.addEventListener('click', () => {
+        if (navDirection === 'column') {
+            console.log('click')
+            navStyle.right = '-100%';
+        }
     })
 })

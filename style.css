@@ -28,12 +28,13 @@ h5 {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: bold;
 }
 
 h2 {
-    font-size: 1.8rem;
+    margin: 1rem 0;
+    font-size: 1.4rem;
 }
 
 h3,
@@ -57,9 +58,12 @@ a {
     color: inherit;
     text-decoration: none;
 }
-a, button {
+
+a,
+button {
     font-family: "Bellefair", serif;
 }
+
 p {
     font-size: 1.2rem;
     line-height: 1.4;
@@ -71,11 +75,11 @@ img {
 
 @media screen and (min-width: 768px) {
     h1 {
-        font-size: 2.8rem;
+        font-size: 2.4rem;
     }
 
     h2 {
-        font-size: 2.6rem;
+        font-size: 2.2rem;
     }
 
     h3,
@@ -181,7 +185,7 @@ input[id="hamburger"]:checked~.hamburger .line3 {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    position: absolute;
+    position: fixed;
     padding: 1.8rem;
 }
 
@@ -198,7 +202,7 @@ input[id="hamburger"]:checked~.hamburger .line3 {
     top: 0;
     right: -100%;
     z-index: 100;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
     list-style: none;
     transition: all ease-in-out 0.3s;
@@ -207,7 +211,7 @@ input[id="hamburger"]:checked~.hamburger .line3 {
 
 .navbar li {
     width: 100%;
-    border-radius: 6px;
+    border-radius: 4px;
     text-transform: uppercase;
 }
 
@@ -225,11 +229,36 @@ input[id="hamburger"]:checked~.hamburger .line3 {
 
 /* Main */
 .main {
-    padding-top: 8rem;
+    padding-top: 6.8rem;
     display: flex;
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
     background: center/cover no-repeat;
     text-align: center;
+}
+
+@media screen and (min-width: 960px) {
+
+    .main {
+        text-align: start;
+    }
+    
+    .nav__hamburger {
+        display: none;
+    }
+
+    .navbar {
+        padding: unset;
+        top: unset;
+        right: 0;
+        height: unset;
+        flex-direction: row;
+        border-radius: 4px;
+        width: 65vw;
+    }
+
+    .nav, .navbar {
+        position: absolute;
+    }
 }
