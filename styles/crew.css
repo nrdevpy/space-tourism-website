@@ -15,6 +15,7 @@
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     z-index: 10;
+    scroll-behavior: smooth;
 }
 
 .crew__section__article {
@@ -76,7 +77,7 @@
     }
 
     .crewImg {
-        max-height: 36rem;
+        max-height: 20rem;
         margin: unset;
         border: none;
     }
@@ -96,8 +97,9 @@
 
     .bulletsPoints {
         align-self: flex-start;
-        top: unset;
-        bottom: 18rem;
-        padding: 2rem 2rem 0 2rem;
+        position: static;
+        padding: 2rem;
+        z-index: 10;
+
     }
 }

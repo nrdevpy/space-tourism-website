@@ -12,7 +12,7 @@ data().then(data => {
         const { name, description } = tech;
         const { landscape } = tech.images;
         techArticle += `
-        <article data-name="${name}" class="tech__article">
+        <article id="${name.replace(/\s/g, "")}" data-name="${name}" class="tech__article">
             <img src=".${landscape}">
             <div>
                 <h3 class="lightGray">The terminology...</h3>
@@ -23,7 +23,7 @@ data().then(data => {
         `;
 
         bulletsPoints += `
-            <li class="tech__bullet">${index + 1}</li>
+            <a href="#${name.replace(/\s/g, "")}" class="tech__bullet">${index + 1}</a>
        `
        techNames.push(name)
     })

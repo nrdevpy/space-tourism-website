@@ -19,7 +19,7 @@ data().then(data => {
         const { webp } = specialist.images
         specialistsNames.push(name)
         innerSpecialist += `
-            <article data-name="${name}" class="crew__section__article desktop__flex">
+            <article id="${name.replace(/\s/g, "")}" data-name="${name}" class="crew__section__article desktop__flex">
                 <img class="crewImg" src=".${webp}"/>
                 <div>
                     <h3 class="lightGray">${role}</h3>
@@ -29,7 +29,7 @@ data().then(data => {
             </article>
        `
         bulletsPoints += `
-            <li class="crew__bullet"></li>
+            <a href="#${name.replace(/\s/g, "")}" class="crew__bullet"></a>
        `
     })
     crewSection.innerHTML = innerSpecialist;
