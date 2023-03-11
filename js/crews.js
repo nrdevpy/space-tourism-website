@@ -19,11 +19,13 @@ data().then(data => {
         const { webp } = specialist.images
         specialistsNames.push(name)
         innerSpecialist += `
-            <article data-name="${name}" class="crew__section__article">
+            <article data-name="${name}" class="crew__section__article desktop__flex">
                 <img class="crewImg" src=".${webp}"/>
-                <h3 class="lightGray">${role}</h3>
-                <h2>${name}</h2>
-                <p class="primaryColor">${bio}</p>
+                <div>
+                    <h3 class="lightGray">${role}</h3>
+                    <h2>${name}</h2>
+                    <p class="primaryColor">${bio}</p>
+                </div>
             </article>
        `
         bulletsPoints += `

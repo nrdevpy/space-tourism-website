@@ -139,25 +139,6 @@ section.destination__info {
         background-image: url('../assets/destination/background-destination-desktop.jpg');
     }
 
-    .main>h1 {
-        align-self: flex-start;
-        margin-block: 4rem;
-        margin-left: 6rem;
-    }
-
-    .main h2 {
-        font-size: 8rem;
-    }
-
-    .main__flex {
-        display: flex;
-        width: 100%;
-        justify-content: space-evenly;
-        align-items: center;
-        column-gap: 4rem;
-        padding: 2rem;
-    }
-
     .planets {
         justify-content: flex-start;
         column-gap: 4rem;
