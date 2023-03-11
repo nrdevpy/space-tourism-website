@@ -14,9 +14,11 @@ data().then(data => {
         techArticle += `
         <article data-name="${name}" class="tech__article">
             <img src=".${landscape}">
-            <h3 class="lightGray">The terminology...</h3>
-            <h2>${name}</h2>
-            <p class="primaryColor">${description}</p>
+            <div>
+                <h3 class="lightGray">The terminology...</h3>
+                <h2>${name}</h2>
+                <p class="primaryColor">${description}</p>
+            </div>
         </article>
         `;
 
