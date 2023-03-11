@@ -113,6 +113,10 @@ img {
 }
 
 .primaryBtn {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-width: 10rem;
     min-height: 10rem;
     border: none;
@@ -187,7 +191,7 @@ input[id="hamburger"]:checked~.hamburger .line3 {
     justify-content: space-between;
     width: 100%;
     position: fixed;
-    padding: 1.8rem;
+    padding: 1rem;
     z-index: 100;
 }
 
@@ -198,7 +202,7 @@ input[id="hamburger"]:checked~.hamburger .line3 {
     align-items: start;
     padding: 6rem 0.5rem 0 0.5rem;
     row-gap: 2rem;
-    width: 75vw;
+    width: 60vw;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -225,6 +229,7 @@ input[id="hamburger"]:checked~.hamburger .line3 {
 .navbar li {
     border-bottom: rgba(255, 255, 255, 0.0) 2px solid;
 }
+
 .navbar li:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
@@ -253,10 +258,12 @@ input[id="hamburger"]:checked~.hamburger .line3 {
     .nav {
         margin-bottom: 2rem;
     }
-    
-    .nav, .navbar {
+
+    .nav,
+    .navbar {
         position: absolute;
     }
+
     .nav__hamburger {
         display: none;
     }
@@ -270,27 +277,27 @@ input[id="hamburger"]:checked~.hamburger .line3 {
         border-radius: 4px;
         width: 65vw;
     }
-    
+
     .navbar li:not(.active):hover {
         background-color: unset;
         border-bottom: rgba(255, 255, 255, 0.1) 2px solid;
 
     }
-    
+
     .main {
         text-align: start;
     }
-    
+
     .main>h1 {
         align-self: flex-start;
-        margin-block: 4rem;
+        margin-block: 2rem;
         margin-left: 6rem;
     }
 
     .main h2 {
         font-size: 4rem;
     }
-    
+
     .desktop__flex {
         display: flex;
         width: 100%;
@@ -299,9 +306,9 @@ input[id="hamburger"]:checked~.hamburger .line3 {
         column-gap: 4rem;
         padding: 2rem;
     }
-    
+
     section.crew__section .crew__section__article img {
         order: 1;
-        
+
     }
 }

@@ -29,7 +29,7 @@ li[class="planet--active"]>a::before {
 }
 
 .planetImg {
-    margin-block: 1rem;
+    margin-block: 2rem;
 }
 
 .planets button {
