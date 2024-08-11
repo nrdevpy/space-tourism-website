@@ -15,6 +15,16 @@
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    /* for Internet Explorer, Edge */
+    scrollbar-width: none;
+    /* for Firefox */
+    overflow-y: scroll;
+}
+
+.tech__header::-webkit-scrollbar {
+    display: none;
+    /* for Chrome, Safari, and Opera */
 }
 
 .tech__header img {
@@ -69,6 +79,7 @@
     .tech__header img {
         max-width: 50%;
     }
+
     .main {
         background-image: url('../assets/technology/background-technology-desktop.jpg');
     }

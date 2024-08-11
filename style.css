@@ -6,6 +6,11 @@
     --subHeading: 1.75rem;
 }
 
+body,
+main {
+    background-color: #0b0d19;
+}
+
 *,
 *::after,
 *::before {
