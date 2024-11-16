@@ -98,7 +98,7 @@
     }
 
     .bulletsPoints {
-        align-self: flex-start;
+        align-self: center;
         position: static;
         padding: 2rem;
         z-index: 10;
